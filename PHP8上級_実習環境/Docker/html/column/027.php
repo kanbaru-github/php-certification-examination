@@ -1,12 +1,15 @@
 <?php
+
+namespace PHP8上級_実習環境\Docker\Html\Column;
+
 declare(strict_types=1);
 error_reporting(-1);
 
 /* トレイト */
-// トレイトは `trait` キーワードで宣言します。  
+// トレイトは `trait` キーワードで宣言します。
 trait HogeTrait
 {
-    // 定数は PHP8.2.0 以降、書く事ができるようになります(試験範囲対象外)。      
+    // 定数は PHP8.2.0 以降、書く事ができるようになります(試験範囲対象外)。
     // const STR = 'str';
 
     // PHP8より前のバージョンでは記述可能なアクセス権に制限がありましたが、PHP8以降は、すべてのアクセス権、抽象化されたメソッド、staticのすべてを書く事ができます。  
@@ -37,14 +40,14 @@ trait FooTrait {
         echo __METHOD__ , "\n";
         var_dump( self::$num );
     }
-    
+
     // 抽象化されたメソッド
     abstract public function abstractFunction(): void;
 }
 class Hoge
 {
-    // 使う時は、使用したいクラスの中で `use` キーワードで取り込みます。  
-    // 複数のトレイトを使う時は、`use` キーワードを並べる他に、カンマ区切りでの指定もできます。  
+    // 使う時は、使用したいクラスの中で `use` キーワードで取り込みます。
+    // 複数のトレイトを使う時は、`use` キーワードを並べる他に、カンマ区切りでの指定もできます。
     // use HogeTrait, FooTrait;
     use HogeTrait;
     use FooTrait;
